@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+websockets
+opencv-python
+mediapipe>=0.10.13
+torch
+torchvision
+pillow
+numpy
+python-multipart
+
+
+# pip install fastapi uvicorn[standard] websockets opencv-python mediapipe torch torchvision pillow numpy python-multipart
