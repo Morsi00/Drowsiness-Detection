@@ -1,52 +1,81 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مرحبًا بك - نظام كشف النعاس</title>
+    <title>Welcome - Drowsiness Detection System</title>
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
             text-align: center;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #89f7fe, #66a6ff);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
         }
-        .welcome-container {
-            max-width: 600px;
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        h1 { font-size: 2.5rem; margin-bottom: 20px; }
-        p { font-size: 1.2rem; margin-bottom: 30px; }
+
+        .floating-text {
+            width: 80%;
+            max-width: 900px;
+            animation: floatUpDown 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatUpDown {
+            0% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
         .start-btn {
-            background-color: #10b981;
+            background: #10b981;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 15px 40px;
             font-size: 1.2rem;
+            font-weight: 600;
             border-radius: 10px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(16,185,129,0.4);
         }
+
         .start-btn:hover {
-            background-color: #059669;
-            transform: translateY(-2px);
+            background: #059669;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(5,150,105,0.5);
         }
     </style>
 </head>
 <body>
-    <div class="welcome-container">
-        <h1>🚗 مرحبًا بك في نظام كشف النعاس</h1>
-        <p>نظام ذكي يستخدم الذكاء الاصطناعي لمراقبة حالة السائق في الوقت الفعلي ويضمن سلامتك أثناء القيادة.</p>
+    <div class="floating-text">
+        <h1>Welcome to the Drowsiness Detection System</h1>
+        <p>An intelligent system that uses AI to monitor the driver's condition in real-time and ensure safety while driving.</p>
         <form action="{{ url_for('drowsiness_page') }}" method="get">
-            <button type="submit" class="start-btn">ابدأ الكشف الآن</button>
+            <button type="submit" class="start-btn">Start Detection Now</button>
         </form>
     </div>
 </body>
