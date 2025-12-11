@@ -122,9 +122,12 @@ First, install all necessary libraries, including PyTorch and Flask, using the p
 ```bash
 pip install -r requirements.txt
 
+Then, run the application by executing the web2.py file:
 python web2.py
 
+Once the server is running, open your browser and go to:
 http://localhost:5000
+
 
 
 
