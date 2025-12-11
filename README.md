@@ -117,10 +117,15 @@ Follow these steps to run the application locally:
 
 ### 1. Prerequisites
 
-First, install all necessary libraries, including PyTorch and the GUI framework, using the provided `requirements.txt` file:
+First, install all necessary libraries, including PyTorch and Flask, using the provided `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
+
+python web2.py
+
+http://localhost:5000
+
 
 
 
