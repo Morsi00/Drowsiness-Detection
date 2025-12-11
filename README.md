@@ -65,9 +65,28 @@ The workflow was divided into the required seven core phases. Below is a detaile
 
 ### 7. GUI Implementation and Application Running
 
-* **Interface Framework:** The user interface was developed using **[Streamlit / Gradio]**.
-* **Functionality:** The GUI allows the user to **[Describe the functionality, e.g., upload an eye image and receive an immediate prediction (Open/Closed) from the PyTorch model]**.
-* **Deployment:** The final application is configured to run the model in inference mode for real-time demonstration.
+### 🖥 Interface Overview
+The graphical interface of the drowsiness-detection system is built using:
+
+- **Flask** → Backend web framework  
+- **HTML, CSS, JavaScript** → Frontend interface  
+- **MediaPipe FaceMesh** → Face & eye landmark detection  
+- **PyTorch CNN Model** → Eye state classification (Open/Closed)
+
+### ⚙️ How the Interface Works
+- The system streams real-time video from the webcam through the `/video_feed` route.
+- MediaPipe extracts eye regions from each frame.
+- Each eye is passed to the CNN model (running in inference mode using `model.eval()`).
+- Predictions are sent back to the frontend through the `/status` API endpoint.
+- JavaScript updates the driver state on the page:
+  - **AWAKE** if average prediction ≥ 0.5  
+  - **SLEEPY** otherwise
+- HTML/CSS are used to display a clean, responsive dashboard.
+
+### 🔧 Deployment
+- The application runs locally using Flask.
+- The video feed uses MJPEG streaming so it works on any modern browser.
+- No installation required on the client side — only the Flask server needs to run.
 
 ---
 
@@ -94,3 +113,4 @@ First, install all necessary libraries, including PyTorch and the GUI framework,
 
 ```bash
 pip install -r requirements.txt
+
