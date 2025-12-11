@@ -11,7 +11,14 @@ The project was developed in full compliance with the academic requirements:
 
 **Technical Stack:**
 * **Model Architecture:** DrowsinessCNN – A custom Convolutional Neural Network (CNN).
-* **GUI Framework:** **[Streamlit / Gradio]** (Please fill in the correct framework used by Mersey)
+* **GUI Framework:** **Flask** (using HTML, CSS, and JavaScript)
+
+
+
+
+
+
+
 
 ---
 
@@ -99,7 +106,8 @@ The graphical interface of the drowsiness-detection system is built using:
 | **Emad** | Model Design (DrowsinessCNN Architecture), PyTorch Implementation, Data Loaders Setup |
 | **Karim** | Model Training, Hyperparameter Tuning, Implementing Early Stopping |
 | **Hatem** | Model Testing and Evaluation, Confusion Matrix, Classification Report Generation |
-| **Mursi** | GUI Implementation (**[Streamlit/Gradio]**), Application Running and Deployment Setup |
+| **Morsi** | GUI Implementation (Flask + HTML/CSS/JavaScript), Application Running and Deployment Setup
+ |
 
 ---
 
@@ -113,4 +121,5 @@ First, install all necessary libraries, including PyTorch and the GUI framework,
 
 ```bash
 pip install -r requirements.txt
+
 
