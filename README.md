@@ -70,9 +70,9 @@ The workflow was divided into the required seven core phases. Below is a detaile
 * **Data Splitting:** The aggregated dataset was split into Train, Validation, and Test sets (typically 80/10/10 split).
 * **Evaluation Metrics:** Testing was conducted on the unseen Test Set using the best-saved weights. Key metrics included the **Confusion Matrix** and the detailed **Classification Report** (Precision, Recall, F1-Score).
 * **Performance Results (To be filled after execution):**
-    * **Overall Accuracy:** **[Percentage %]**
-    * **Closed Class F1-Score:** **[Value]**
-    * **Open Class F1-Score:** **[Value]**
+    * **Overall Accuracy:** **[98%]**
+    * **Closed Class F1-Score:** **[0.96]**
+    * **Open Class F1-Score:** **[0.99]**
 
 ### 7. GUI Implementation and Application Running
 
@@ -107,9 +107,9 @@ The graphical interface of the drowsiness-detection system is built using:
 | :--- | :--- |
 | **Sayed** | Problem Definition, Data Collection (Kaggle), Initial Data Setup |
 | **Ibrahim** | Data Cleaning and Analysis, Feature Engineering (Data Augmentation) |
-| **Emad** | Model Design (DrowsinessCNN Architecture), PyTorch Implementation, Data Loaders Setup |
+| **Karim** | Model Design (DrowsinessCNN Architecture), PyTorch Implementation, Data Loaders Setup |
 | **Karim** | Model Training, Hyperparameter Tuning, Implementing Early Stopping |
-| **Hatem** | Model Testing and Evaluation, Confusion Matrix, Classification Report Generation |
+| **Ziad** | Model Testing and Evaluation, Confusion Matrix, Classification Report Generation |
 | **Morsi** | GUI Implementation (Flask + HTML/CSS/JavaScript), Application Running and Deployment Setup|
  
 

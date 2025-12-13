@@ -1,5 +1,5 @@
 from flask import Flask, render_template, Response, jsonify
-from flask_cors import CORS
+# from flask_cors import CORS
 import cv2
 import mediapipe as mp
 import torch
@@ -9,7 +9,7 @@ from PIL import Image
 import numpy as np
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 # ============ موديل كشف النعاس ============
 class DrowsinessCNN(nn.Module):
