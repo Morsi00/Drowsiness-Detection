@@ -105,7 +105,7 @@ The graphical interface of the drowsiness-detection system is built using:
 
 | Team Member | Core Responsibilities and Focus Areas |
 | :--- | :--- |
-| **Sayed&&Ibrahim** | Problem Definition, Data Collection (Kaggle), Initial Data Setup |
+| **Sayed** |  Data Collection (Kaggle), Initial Data Setup |
 | **Sayed&&Ibrahim** | Data Cleaning and Analysis, Feature Engineering (Data Augmentation) |
 | **Ahmed Karim** | Model Design (DrowsinessCNN Architecture), PyTorch Implementation, Data Loaders Setup |
 | **Ahmed Emad** | Model Training, Hyperparameter Tuning, Implementing Early Stopping |

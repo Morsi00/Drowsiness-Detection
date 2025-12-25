@@ -47,16 +47,17 @@ class DrowsinessCNN(nn.Module):
         x = self.input(x)
         x = x.view(x.size(0), -1)
         return self.dense(x)
+# ============ تحميل الموديل ============
+model = DrowsinessCNN()
+model.load_state_dict(torch.load('./saved_model/open_cloded_eye_detector.pth', map_location='cpu'))
+model.eval()
 
 # ============ إعداد MediaPipe ============
 mp_face_mesh = mp.solutions.face_mesh
 RIGHT_EYE_INDEXES = [33, 160, 158, 133, 153, 144]
 LEFT_EYE_INDEXES = [362, 385, 387, 263, 373, 380]
 
-# ============ تحميل الموديل ============
-model = DrowsinessCNN()
-model.load_state_dict(torch.load('./saved_model/open_cloded_eye_detector.pth', map_location='cpu'))
-model.eval()
+
 
 # ============ التحويلات ============
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
@@ -82,7 +83,13 @@ current_status = {
 # ======= دوال مساعدة =======
 def get_eye_region(landmarks, eye_indexes, frame_shape):
     h, w = frame_shape[:2]
-    points = np.array([[int(landmarks[idx].x*w), int(landmarks[idx].y*h)] for idx in eye_indexes])
+    points = []
+    for idx in eye_indexes:
+      x_pixel = int(landmarks[idx].x * frame_shape[1])  # frame_shape[1] = width
+      y_pixel = int(landmarks[idx].y * frame_shape[0])  # frame_shape[0] = height
+      points.append([x_pixel, y_pixel])
+
+    points = np.array(points) 
     x_min = max(0, np.min(points[:,0]) - 20)
     x_max = min(w, np.max(points[:,0]) + 20)
     y_min = max(0, np.min(points[:,1]) - 15)
