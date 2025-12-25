@@ -107,8 +107,8 @@ The graphical interface of the drowsiness-detection system is built using:
 | :--- | :--- |
 | **Sayed** |  Data Collection (Kaggle), Initial Data Setup |
 | **Sayed&&Ibrahim** | Data Cleaning and Analysis, Feature Engineering (Data Augmentation) |
-| **Ahmed Karim** | Model Design (DrowsinessCNN Architecture), PyTorch Implementation, Data Loaders Setup |
-| **Ahmed Emad** | Model Training, Hyperparameter Tuning, Implementing Early Stopping |
+| **Ahmed Emad** | Model Design (DrowsinessCNN Architecture), PyTorch Implementation, Data Loaders Setup |
+| **Ahmed Karim** | Model Training, Hyperparameter Tuning, Implementing Early Stopping |
 | **Mohamed hatem** | Model Testing and Evaluation, Confusion Matrix, Classification Report Generation |
 | **Ahmed Morsi** | GUI Implementation (Flask + HTML/CSS/JavaScript), Application Running and Deployment Setup|
  
@@ -131,6 +131,7 @@ python web2.py
 
 Once the server is running, open your browser and go to:
 http://localhost:5000
+
 
 
 
